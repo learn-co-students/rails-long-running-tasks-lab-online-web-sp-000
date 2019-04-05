@@ -1,4 +1,9 @@
 class SongsController < ApplicationController
+  # require 'csv'
+
+  # def initialize(title)
+  #   @title = title
+  # end
 
   def index
     @songs = Song.all
@@ -50,5 +55,5 @@ class SongsController < ApplicationController
   def song_params
     params.require(:song).permit(:title, :artist_name)
   end
-  
+
 end
