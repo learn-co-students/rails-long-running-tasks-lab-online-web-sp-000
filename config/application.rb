@@ -13,3 +13,5 @@ module DisplayingAssociationsRailsLab
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+Rails.application.config.active_record.belongs_to_required_by_default = false
