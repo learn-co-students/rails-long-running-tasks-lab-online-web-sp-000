@@ -1,7 +1,20 @@
-<ul>
-<% @songs.each do |song| %>
-  <li><%= display_artist(song) %> - <%= link_to song.title, song_path(song) %></li>
+<h1>Songs</h1>
+<h5>Upload songs by CSV or Add New</h5>
+
+<%= form_tag songs_upload_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Import File" %>
 <% end %>
-</ul>
 <br>
+
 <%= link_to "Add New Song", new_song_path %>
+
+<br>
+
+<h3>All Songs</h3>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= display_artist(song) %> - <%= link_to song.title, song_path(song) %></li>
+  <% end %>
+</ul>
