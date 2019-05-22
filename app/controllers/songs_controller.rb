@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+require File.expand_path('../../config/environment', __FILE__)
 
   def index
     @songs = Song.all
@@ -51,4 +52,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
