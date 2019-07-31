@@ -9,6 +9,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker'
 gem 'listen'
 
+
+
+gem 'bootsnap'
+
+gem 'nokogiri', '1.10.3'
+
 group :development, :test do
   gem 'pry'
   gem 'capybara'
