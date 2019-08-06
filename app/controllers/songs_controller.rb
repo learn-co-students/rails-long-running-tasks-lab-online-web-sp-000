@@ -1,5 +1,10 @@
 class SongsController < ApplicationController
 
+  def upload
+    Song.upload(params[:file])
+    redirect_to songs_url, notice: "Songs imported!"
+  end
+
   def index
     @songs = Song.all
   end
