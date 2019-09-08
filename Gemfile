@@ -8,10 +8,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker'
 gem 'listen'
-
+gem 'bootsnap'
 group :development, :test do
   gem 'pry'
-  gem 'capybara'
+  gem 'capybara', '~>3.13.2'
   gem 'rspec-rails'
 end
 
