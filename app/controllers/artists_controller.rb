@@ -40,7 +40,7 @@ class ArtistsController < ApplicationController
     @artist.destroy
     flash[:notice] = "Artist deleted."
     redirect_to artists_path
-  end
+
 
   private
 
